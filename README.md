@@ -1,44 +1,27 @@
-# OpenAI API Quickstart - Python example app
+## Inspiration
 
-This is an example pet name generator app used in the OpenAI API [quickstart tutorial](https://beta.openai.com/docs/quickstart). It uses the [Flask](https://flask.palletsprojects.com/en/2.0.x/) web framework. Check out the tutorial or follow the instructions below to get set up.
+A lot of the times I find myself watching videos on YouTube, whether it's for work/study purposes or for the mere pleasure of it. I like to watch different kinds of YouTubers from all over the world and there are times where there aren't any captions to understand what they're saying. I realized that sometimes this language barrier can limit their audience to only people who understand the language they speak, so I wanted to start project that allowed YouTube videos to be transcribed and translated to any language of one's choosing!
 
-## Setup
+## What it does
 
-1. If you don’t have Python installed, [install it from here](https://www.python.org/downloads/)
+In the website TransLingo, you have to input the YouTube video URL that you want to transcribe, and the language that you want to translate the transcriptions to. After clicking on the Confirm button, it will display both the transcriptions in the original language and the language that you want to translate it to with timestamps.
 
-2. Clone this repository
+## How I built it
 
-3. Navigate into the project directory
+I built TransLingo using HTML, CSS and Python using Flask. I also used the OpenAI API's Whisper and GPT model to implement the features of transcription and translation, and used the pytube library in Python to convert the YouTube video URL to an mp3 file.
 
-   ```bash
-   $ cd openai-quickstart-python
-   ```
+## Challenges I ran into
 
-4. Create a new virtual environment
+One of the biggest challenges was having to settle on a project idea I felt confident in completing within the deadline. When thinking of a project, I needed to greatly consider the time constraint and my knowledge of languages and other technologies in the beginning. Other challenges I had were having to figure out which Python library to process YouTube videos with and learning how to implement the Whisper model to get transcriptions and timestamps since I am pretty new to learning about APIs and using Python libraries.
 
-   ```bash
-   $ python -m venv venv
-   $ . venv/bin/activate
-   ```
+## Accomplishments that I'm proud of
 
-5. Install the requirements
+Overall, I am proud of myself for successfully completing this project within the time constraint. At first, I was hesitant on how big of a scale I wanted my project to be due to the possible obstacles I might face and not finishing it on time. But in the end, I’m proud that I overcame the steep learning curve and learned how to use some of the models, frameworks, and libraries for this project.
 
-   ```bash
-   $ pip install -r requirements.txt
-   ```
+## What I learned
 
-6. Make a copy of the example environment variables file
+Working on this project helped me learn the importance of managing my time well and knowing what to prioritize. I also learned new technical skills, including how to implement OpenAI's AI models into a website, different Python libraries for YouTube, and using Flask to run TransLingo with Python3.
 
-   ```bash
-   $ cp .env.example .env
-   ```
+## What's next for TransLingo
 
-7. Add your [API key](https://beta.openai.com/account/api-keys) to the newly created `.env` file
-
-8. Run the app
-
-   ```bash
-   $ flask run
-   ```
-
-You should now be able to access the app at [http://localhost:5000](http://localhost:5000)! For the full context behind this example app, check out the [tutorial](https://beta.openai.com/docs/quickstart).
+Although there are many ways that TransLingo can be improved and further developed, an area I want to focus on next is also providing mp3 files of voiceovers in the translated language chosen.
