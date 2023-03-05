@@ -3,11 +3,12 @@ import whisper
 from whisper.utils import WriteVTT
 from pytube import YouTube
 import os
+import config
 
 from flask import Flask, redirect, render_template, request, url_for
 
 app = Flask(__name__)
-openai.api_key = "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"
+openai.api_key = config.key
 
 
 @app.route("/", methods=("GET", "POST"))
