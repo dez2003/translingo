@@ -1,5 +1,3 @@
-## <b>Welcome to TransLingo!!<b>
-
 ## Inspiration
 
 A lot of the times I find myself watching videos on YouTube, whether it's for work/study purposes or for the mere pleasure of it. I like to watch different kinds of YouTubers from all over the world and there are times where there aren't any captions to understand what they're saying. I realized that sometimes this language barrier can limit their audience to only people who understand the language they speak, so I wanted to start project that allowed YouTube videos to be transcribed and translated to any language of one's choosing!
