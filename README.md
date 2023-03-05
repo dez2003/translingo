@@ -1,6 +1,4 @@
-## Welcome to TransLingo!!
-
-This is my project I have submitted for the HackForCreators Hackathon.
+## <b>Welcome to TransLingo!!<b>
 
 ## Inspiration
 
