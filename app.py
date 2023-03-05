@@ -7,7 +7,7 @@ import os
 from flask import Flask, redirect, render_template, request, url_for
 
 app = Flask(__name__)
-openai.api_key = "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"
+openai.api_key = "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"
 
 
 @app.route("/", methods=("GET", "POST"))
@@ -18,13 +18,13 @@ def index():
 
         filename = audio_conversion(url)
         model = whisper.load_model("base")
-        transcribed = model.transcribe(filename)
+        transcribed = model.transcribe(filename, fp16=False)
 
         with open('sub.vtt', "w") as txt:
             WriteVTT.write_result(self=WriteVTT, result=transcribed, file=txt)
 
         with open('sub.vtt', "r") as txt:
-            result = '<br>'.join(txt.readlines())
+            result = '<br>'.join(txt.readlines()).replace('WEBVTT', '')
 
         translated = translate(result, translated_language)
         
@@ -51,7 +51,7 @@ def translate(transcription, language):
         model="text-davinci-003",
         prompt= f"Translate {transcription} into {language}",
         temperature=0.3,
-        max_tokens=250,
+        max_tokens=500,
         top_p=1.0,
         frequency_penalty=0.0,
         presence_penalty=0.0
